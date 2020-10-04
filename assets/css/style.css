@@ -131,17 +131,17 @@ section {
 /* Beginning of Projects section */
 .portfolio-grid {
     display: inline-flex;
+    
 }
 
 .grid-container {
     display: grid;
     padding: 20px;
     margin: 0 auto;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: repeat(3, minmax(100px, 1fr));
     grid-gap: 10px;
-    grid-auto-flow: dense;
-    
+    margin: 0 0 0 3%;  
 }
 
 .portfolio-grid-item {
@@ -151,9 +151,13 @@ section {
     align-items: center;
     padding: 1em;
     color: black;
+    
 }
 
-
+.portfolio-grid-item:first-child {
+    grid-column: auto/span 2;
+    grid-row: auto/span 2;
+}
 
 /* End of Projects section */
 
@@ -165,6 +169,7 @@ section {
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    margin: 0 0 0 3%;
 }
 
 .contact ul li{
@@ -173,5 +178,109 @@ section {
     align-items: center;
 }
 
-
 /* End of Contact Section */
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    footer h2, footer div {
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-title {
+        width: 80%;
+    }
+
+    .trainer {
+        flex: 0 70%;
+    }
+
+    .contact-info iframe {
+        flex: 1 100%;
+    }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 30px 15px;
+    }
+    
+    .step h3 {
+        flex: 1 100%;
+        text-align: center;
+    }
+
+    .step-info {
+        flex: 2 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .step-img {
+        flex: 0 32%;
+        margin-right: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .step-text {
+        flex: 100%;
+    }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+   .hero-form button {
+       width: 100%;
+   }
+
+   .section-title {
+       width: 95%;
+   }
+
+   .intro p {
+       width: 100%;
+   }
+
+   .trainer {
+       flex: 0 100%;
+   }
+
+   .contact-info {
+       text-align: center;
+   }
+
+   .contact-info > * {
+       flex: 0 100%;
+   }
+
+   .contact-form {
+       order: 3;
+   }
+}
