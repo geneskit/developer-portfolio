@@ -10,7 +10,7 @@ A website that showcases my work to future employers.
 
 https://geneskit.github.io/developer-portfolio/
 
-![](assets/images/portfolio.png)
+![](../developer-portfolio/assets/images/portfolio.PNG)
 
 ## Built With
 
