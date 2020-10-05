@@ -22,13 +22,14 @@ body {
 
 /* Beginning of header code */
 
-header {
+header, footer {
    padding: 20px 35px;
    background-color: var(--secondary-color);
    display: flex;
    justify-content: space-between;
    flex-wrap: wrap;
    font-family: fantasy;
+   /*fix alignment of name in header */
 }
 
 header h1 {
@@ -36,6 +37,7 @@ header h1 {
    margin: auto;
    font-size: 36px;
    color: var(--fill-color);
+   margin: 0;
 }
 
 header a {
@@ -70,15 +72,15 @@ section {
 
 /* Beginning of hero  */
 .hero {
-   background-size: cover;
-   background-position: center;
-   /* use santa monica picture */
-   background-image: url("../images/bg2.jpg");
-   display: flex;
-   justify-content: center;
-   flex-wrap: wrap;
-   align-items: flex-start;
-   width:100%;
+    background-image: url("../images/bg2.jpg");
+    background-size: cover;
+    background-position: center;
+    /* use santa monica picture */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .hero-text {
@@ -92,6 +94,7 @@ section {
 .profile {
    width: 700px;
    height: 450px;
+   margin-right: 250px;
 }
 
 /* End of hero */
@@ -153,14 +156,58 @@ section {
    align-items: center;
    padding: 1em;
    color: black;
-   
+   max-width: 100%;
+}
+
+.portfolio-grid-item a {
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    background-color: black;
 }
 
 .portfolio-grid-item:first-child {
-   grid-column: auto/span 2;
-   grid-row: auto/span 2;
+    grid-column: auto/span 2;
+    grid-row: auto/span 2;
+    background: url(../images/run-buddy.PNG);
+    width: 92%;
+    height: 83%;
+    background-size: cover;
+    background-position: center;
 }
 
+.box2 {
+    background: url(../images/horiseon.PNG);
+    width: 198px;
+    height: 98px;
+    background-size: cover;
+    background-position: center;
+}
+
+.box3 {
+    background: red;
+    width: 198px;
+    height: 90px;
+    background-size: cover;
+    background-position: center;
+}
+
+.box4 {
+    background: url(../images/free-movies.jpg);
+    width: 198px;
+    height: 98px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px;
+}
+
+.box5 {
+    background: url(../images/chill-image.jpg);
+    width: 198px;
+    height: 98px;
+    background-size: cover;
+    background-position: center;
+}
 /* End of Projects section */
 
 /* Beginning of Contact Section */
@@ -171,7 +218,7 @@ section {
    justify-content: space-between;
    align-items: center;
    list-style: none;
-   margin: 0 0 0 3%;
+   margin: auto;
 }
 
 .contact ul li{
@@ -184,14 +231,63 @@ section {
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
-   
+.hero-text{
+    text-align: center;
+    margin-right: 150px;
+}
+
+.section-title-div {
+    border-right: 3px solid;
+    width: 150px;
+    text-align: center;
+}
+
+.profile {
+    width: 500px;
+    height: 350px;
+    position: relative;
+    margin-right: 100px;
+}
+.section-title {
+    font-size: large;
+}
+
+.grid-container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: repeat(4, minmax(100px, 1fr));
+}
 }
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
-   
+.hero-text{
+    text-align: center;
+    margin-right: 150px;
+}
+
+.section-title-div {
+    border-right: 3px solid;
+    width: 150px;
+    text-align: center;
+}
+
+.profile {
+    width: 500px;
+    height: 350px;
+    position: relative;
+    margin-right: 100px;
+}
+
+.section-title {
+    font-size: large;
+}
+
+.grid-container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: repeat(4, minmax(100px, 1fr));
+}
 }
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
-  
+    
 }
