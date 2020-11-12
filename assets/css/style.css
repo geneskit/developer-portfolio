@@ -185,7 +185,7 @@ section {
 }
 
 .box3 {
-    background: red;
+    background: url(../images/covid-peeper.png);
     width: 198px;
     height: 90px;
     background-size: cover;
