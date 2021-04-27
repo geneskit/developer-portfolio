@@ -1,3 +1,18 @@
+:root {
+   --primary-color: rgb(0, 0, 129);
+   --secondary-color: rgb(9, 238, 219);
+   --fill-color: black;
+   --header-text: black;
+   --section-title: black;
+   --section-text: black;
+
+   --light-shades: #F5F6F4;
+   --light-accent: #A59D98;
+   --main-brand-color: #D4A968;
+   --dark-accent: #E56D4C;
+   --dark-shades: #343B39;
+}
+
 html,body
 {
    width: 100%;
@@ -9,22 +24,16 @@ html,body
 
 body {
    font-family: Helvetica, Arial, sans-serif;
-   color: black;
+   color: var(--section-title);
    width: 100%;
 }
 
-:root {
-   --primary-color: rgb(0, 0, 129);
-   --secondary-color: rgb(9, 238, 219);
-   --fill-color: black;
-   --section-title: black;
-}
 
 /* Beginning of header code */
 
 header, footer {
    padding: 20px 35px;
-   background-color: var(--secondary-color);
+   background-color: var(--dark-shades);
    display: flex;
    justify-content: space-between;
    flex-wrap: wrap;
@@ -122,7 +131,6 @@ section {
 .about h2, .contact h2 {
    padding: 0 20px 0 0;
    color: var(--primary-color);
-   
 }
 
 .about p {
